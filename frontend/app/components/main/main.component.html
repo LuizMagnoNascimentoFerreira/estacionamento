@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div style="text-align:center;">
+        <img src="/assets/estacionamento.png" width="1000" height="500" alt="">
+    </div>
+    
+    <div id="A1" (click)="selectParkingSpace('A1')" style="position:absolute;top:20%;right:62%;width:30px;height:30px;border:1px solid black;background-color:red"></div>
+    <div id="A2" (click)="selectParkingSpace('A2')" style="position:absolute;top:28%;right:62%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="A3" (click)="selectParkingSpace('A3')" style="position:absolute;top:37%;right:62%;width:30px;height:30px;border:1px solid black;"></div>
+    
+
+    <div id="B1" (click)="selectParkingSpace('B1')" style="position:absolute;top:20%;right:53%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="B2" (click)="selectParkingSpace('B2')" style="position:absolute;top:28%;right:53%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="B3" (click)="selectParkingSpace('B3')" style="position:absolute;top:37%;right:53%;width:30px;height:30px;border:1px solid black;"></div>
+
+    <div id="C1" (click)="selectParkingSpace('C1')" style="position:absolute;top:20%;right:49%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="C2" (click)="selectParkingSpace('C2')" style="position:absolute;top:28%;right:49%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="C3" (click)="selectParkingSpace('C3')" style="position:absolute;top:37%;right:49%;width:30px;height:30px;border:1px solid black;"></div>
+    
+    <div id="D1" (click)="selectParkingSpace('D1')" style="position:absolute;top:20%;right:41%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="D2" (click)="selectParkingSpace('D2')" style="position:absolute;top:28%;right:41%;width:30px;height:30px;border:1px solid black;"></div>
+    <div id="D3" (click)="selectParkingSpace('D3')" style="position:absolute;top:37%;right:41%;width:30px;height:30px;border:1px solid black;"></div>
+    <div style="text-align:center;">
+    <div class="card" style="width:600px;margin:10px;margin-left:400px;" *ngIf="occupationForm === true" >
+        <div class="card-header">
+            <h3>Formulário de ocupação</h3>
+        </div>
+        <div class="card-body">
+            <div>
+                <div class="mb-3">
+                    <input type="number" id="hours" max="2" min="0" class="form-control"  value="0" style="width:60px;display:inline;">
+                    <span> horas e </span>
+                    <input type="number" id="minutes" max="59" min="1" class="form-control" value="30" style="width:60px;display:inline">
+                    <span> minutos</span>
+                   <div style="margin-top:10px;">
+                    <button class="btn btn-primary" (click)="confirmParkingSpaceOccupation()">Ocupar</button>
+                   </div>
+                   <div>
+                    <button class="btn btn-secondary" (click)="cancelParkingSpaceOccupationForm()">Cancelar</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

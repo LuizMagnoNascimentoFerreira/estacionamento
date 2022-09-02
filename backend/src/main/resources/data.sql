@@ -1,0 +1,2 @@
+INSERT INTO parking_space(location) VALUES ('A1'),('A2'),('A3'),('B1'),('B2'),('B3'),('C1'),('C2'),('C3'),('D1'),('D2'),('D3');
+INSERT INTO user(cpd,name,password) VALUES ('12345','root','$2a$12$.WBAaHnOBt5QbTiDuFG4WezxIsT6BxTMoE4jBSDHoIQ/EjSuEeIi6');
